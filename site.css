@@ -1,0 +1,8 @@
+.bought{
+  text-decoration: underline;
+  background-color: orangered ;
+  height: 32px;
+}
+.unbought{
+  height: 32px;
+}
