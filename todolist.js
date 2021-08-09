@@ -24,7 +24,6 @@ const btn = document.querySelector('#btn'),
     
             for(let i=0; i < todolist.length; i++){
              idlist[i]= `<li id="${i}" class="unbought">${todolist[i]}&nbsp;<button onClick="DeleteItem(${i})" class="delete btn btn-outline-danger float-right btn-sm">Ta bort</button></li> `; 
-            //  DetleteItemHandler();
             };
             //Tar bort kommatecknen i arrayen.
             let stringWithoutCommas =  idlist.join('');
@@ -34,29 +33,6 @@ const btn = document.querySelector('#btn'),
               article.value = '';
         };
 
-    function DetleteItemHandler(){
-        let remove = document.querySelector('.delete');
-        if (remove){
-           document.addEventListener('DOMContentLoaded', function () { 
-               remove.addEventListener('click', function(evt){
-                   let event = evt || window.event;
-                   let target = event.target
-                   DeleteItem(target)
-               });
-               remove.onclick = function(){
-                   return false;
-               }
-              // if(document.getElementsByClassName('delete').clicked == true){
-                   remove.onclick = function (evt) {
-                       // Event tweaks, since IE wants to go its own way...
-                       const event = evt || window.event;
-                       const target = event.target
-                       DeleteItem(target);  
-                   }
-           //    }
-            });
-         }
-    };
 
     function DeleteItem(id){
         if (id > -1) {
